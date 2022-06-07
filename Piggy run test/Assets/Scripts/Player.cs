@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         capCollider2d = GetComponent<CapsuleCollider2D>();
     }
-
+    public void testparam;
     // Update is called once per frame
     void Update()
     {
