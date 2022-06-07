@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     private CapsuleCollider2D capCollider2d;
     //bool isGrounded;
     Animator anim;
+    int Hp = 1;
+    public Main main;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,5 +76,12 @@ public class Player : MonoBehaviour
         {
             anim.SetInteger("State", 3);
         }
+
     }*/
+
+    public void RecountHp(int deltaHp )
+    { Hp = Hp + deltaHp;
+        if(deltaHp < 0) { main.GetComponent<Main>().Lose(); }
+        print(Hp);
+    }
 }
